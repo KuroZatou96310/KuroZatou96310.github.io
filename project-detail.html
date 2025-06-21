@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プロジェクト詳細 | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet.css">
+  <link rel="stylesheet" href="project-detail.css">
+
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- ヘッダー -->
+  <header class="bg-white shadow-md p-4">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <h1 class="text-xl font-bold">My Portfolio</h1>
+      <a href="index.html" class="text-blue-500 hover:underline">← トップへ戻る</a>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="max-w-4xl mx-auto mt-10 px-4">
+    <!-- プロジェクト画像 -->
+    <img src="project1.jpg" alt="プロジェクト画像" class="w-full h-auto rounded-lg shadow-md mb-6">
+
+    <!-- タイトル -->
+    <h2 class="text-3xl font-bold mb-4">Unityによる2Dゲーム制作</h2>
+
+    <!-- 概要 -->
+    <p class="mb-4 text-lg leading-relaxed">
+      UnityとC#を使って開発した2Dのアクションゲームです。TilemapとPhysics2Dを活用し、敵AIやゲーム進行のイベントなども実装しました。
+    </p>
+
+    <!-- 使用技術 -->
+    <div class="mb-4">
+      <h3 class="text-xl font-semibold mb-2">使用技術</h3>
+      <ul class="list-disc list-inside">
+        <li>Unity (C#)</li>
+        <li>Tilemap / Rigidbody2D / Animator</li>
+        <li>Photoshop（素材制作）</li>
+      </ul>
+    </div>
+
+    <!-- GitHubやデモへのリンク -->
+    <div class="mb-6">
+      <h3 class="text-xl font-semibold mb-2">リンク</h3>
+      <ul class="list-disc list-inside text-blue-600">
+        <li><a href="https://github.com/username/unity-game" target="_blank" class="hover:underline">GitHubリポジトリ</a></li>
+        <li><a href="https://yourgame.demo" target="_blank" class="hover:underline">プレイデモページ</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer class="bg-white mt-10 py-4 shadow-inner text-center text-sm text-gray-500">
+    &copy; 2025 Your Name
+  </footer>
+</body>
+</html>
