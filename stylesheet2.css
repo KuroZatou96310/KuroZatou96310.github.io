@@ -31,6 +31,8 @@ body {
   padding: 0;
 }
 
+
+
 #header ul li a {
   color: white;
   text-decoration: none;
@@ -380,6 +382,32 @@ body {
     }
 
 
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 2px solid;
+    /* デフォルト（保守中）スタイル（緑） */
+    color: #16a34a;
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+}
+
+/* 保守中スタイル（緑） */
+.status-maintenance {
+    color: #16a34a;
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+}
+
+/* 制作中スタイル（オレンジ） */
+.status-development {
+    color: #ea580c;
+    background-color: #fff7ed;
+    border-color: #ea580c;
+}
+
 
 /* 改善された詳細切り替えボタン */
 .toggle-detail-btn {
@@ -473,12 +501,16 @@ transform: translateY(-2px);
       background-color: rgba(0, 0, 0, 0.8);
     }
 
-    .modal-content {
-      position: relative;
-      margin: 5% auto;
-      max-width: 80%;
-      max-height: 80%;
-    }
+    /* モーダルの中身 */
+.modal-content {
+  position: relative;
+  margin: 5% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 0vw;
+  max-height: 90vh;
+}
 
     .modal img {
       width: 100%;
@@ -636,4 +668,32 @@ body {
 /* フッター */
 .footer {
   background: linear-gradient(135deg, #926be0 0%, #5e35b1 100%);
+}
+
+
+
+
+
+#imageModal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+
+/* 拡大画像 */
+#modalImage {
+  max-width: 80vw;
+  max-height: 80vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
