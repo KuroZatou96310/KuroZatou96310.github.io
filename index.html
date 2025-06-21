@@ -10,6 +10,21 @@
     <title>Portfolio</title>
 </head>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".toggle-detail");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const detail = button.nextElementSibling;
+        const isVisible = detail.style.display === "block";
+        detail.style.display = isVisible ? "none" : "block";
+        button.textContent = isVisible ? "▶ 詳細を表示" : "▼ 詳細を非表示";
+      });
+    });
+  });
+</script>
+
 <body>
     <!-- ヘッダー -->
     <header id="header">
@@ -60,7 +75,7 @@
 
 
 
-            <h2 class="section-title" >Works</h2>
+    <h2 class="section-title" >Works</h2>
 
 <div class="portfolio-container">
   <a href="project1.html" class="project-block">
@@ -176,6 +191,152 @@
 
 
 
+<section id="works" class="timeline-section">
+  <h2 class="section-title">制作実績</h2>
+
+  <div class="timeline">
+<div class="timeline-item">
+  <div class="timeline-date">2024年12月</div>
+  <div class="timeline-content">
+    <h3>魚達の闘争</h3>
+    <div class="text-with-image">
+      <div class="text-block">
+        <p>制作期間：1週間</p>
+        <p>Unityで制作した2D対戦ゲーム</p>
+        <ul>
+          <li>Unity</li>
+          <li>C#</li>
+          <li>Joy-Con</li>
+        </ul>
+        <button class="toggle-detail">▶ 詳細を表示</button>
+        <div class="detail-text">
+          <p>制作意図：ゲームパッド（Joy-Con）対応のマルチプレイを通して、UnityのInput Systemを学習。</p>
+          <p>工夫点：水中らしさを出すために加速度や水流表現をスクリプトで調整。</p>
+        </div>
+      </div>
+      <div class="image-block">
+        <img src="img/sakana_game_1.png" alt="魚達の闘争" class="project-image">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年11月</div>
+      <div class="timeline-content">
+        <h3>アヒルパーカマン</h3>
+        <p>制作期間：1週間</p>
+        <p>Blenderで制作した人形ローポリモデル</p>
+        <ul>
+          <li>Blender</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年10月</div>
+      <div class="timeline-content">
+        <h3>イフリート</h3>
+        <p>制作期間：3日</p>
+        <p>Blenderで制作したゲーム用モデル</p>
+        <ul>
+          <li>Blender</li>
+          <li>スカルプト</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年9月</div>
+      <div class="timeline-content">
+        <h3>ブラックドラゴン</h3>
+        <p>制作期間：2日</p>
+        <p>Blenderで制作した3Dプリントフィギュア用モデル</p>
+        <ul>
+          <li>Blender</li>
+          <li>スカルプト</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年9月</div>
+      <div class="timeline-content">
+        <h3>四足歩行ロボット</h3>
+        <p>制作期間：2週間</p>
+        <p>Blenderで制作した3Dプリント用ロボットモデル</p>
+        <ul>
+          <li>Blender</li>
+          <li>スカルプト</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年8月</div>
+      <div class="timeline-content">
+        <h3>Kaggle細胞コンペ</h3>
+        <p>制作期間：2週間</p>
+        <p>画像分類タスクにCNNを用いて参加</p>
+        <ul>
+          <li>Python</li>
+          <li>PyTorch</li>
+          <li>Kaggle</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年7月</div>
+      <div class="timeline-content">
+        <h3>Kaggleセンサデータコンペ</h3>
+        <p>制作期間：2週間</p>
+        <p>時系列データの異常検知に取り組んだコンペ参加</p>
+        <ul>
+          <li>Python</li>
+          <li>scikit-learn</li>
+          <li>Kaggle</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年6月</div>
+      <div class="timeline-content">
+        <h3>部室スマートキー</h3>
+        <p>制作期間：2週間</p>
+        <p>Raspberry Piを用いたスマートロックの試作</p>
+        <ul>
+          <li>Python</li>
+          <li>Raspberry Pi</li>
+          <li>IoT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">2024年5月</div>
+      <div class="timeline-content">
+        <h3>AI当たり屋ゲーム</h3>
+        <p>制作期間：2日</p>
+        <p>YOLOで人を検出して接触するゲームAIを制作</p>
+        <ul>
+          <li>Python</li>
+          <li>YOLO</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
 
 
 <div class="oo-midasi" ></div>
@@ -183,36 +344,39 @@
 
 
 
-    <section id="skils" class="wrapper">
-        <h2 class="section-title" >Skils</h2>
+<section id="skils" class="wrapper">
+  <h2 class="section-title">Skils</h2>
 
-        <ul class="event-list">
-            <li>これまでの開発で使用した技術等</li>
-        </ul>
+  <div class="skill-card">
+    <h3>言語（習熟度順）</h3>
+    <ul class="skill-list">
+      <li>Python - 2年間の学習・開発経験</li>
+      <li>HTML/CSS - 2年の学習・開発経験</li>
+      <li>C - 1年の学習・開発経験</li>
+      <li>SQL - 基本的なクエリ操作</li>
+    </ul>
+  </div>
 
-        <div class="tool-description">
-            <ul>
-                <li><strong>VSCode</strong>：Webアプリ開発</li>
-                <li><strong>Git, GitHub</strong>：部活動等でのソースコードの管理</li>
-                <li><strong>Linux</strong>：RaspberryPi4にUbuntu環境構築</li>
+  <div class="skill-card">
+    <h3>開発環境・ツール</h3>
+    <ul class="skill-list">
+      <li>VSCode - Webアプリ開発</li>
+      <li>Git / GitHub - ソースコードの管理</li>
+      <li>Linux (Ubuntu) - Raspberry Pi4で構築</li>
+    </ul>
+  </div>
 
-            </ul>
-        </div>
-
-        blender : 3dモデル制作。
-
-        pytorch
-        tensorflow
-        keras
-        pandas
-        numpy
-        R言語
-
-        unity
-        MLagent
-        RaspberryPi
-
-            </section>
+  <div class="skill-card">
+    <h3>使用経験のあるライブラリ・フレームワーク</h3>
+    <ul class="skill-list">
+      <li>blender - 3Dモデル制作</li>
+      <li>PyTorch / TensorFlow / Keras</li>
+      <li>pandas / numpy / R言語</li>
+      <li>Unity / ML-Agents</li>
+      <li>Raspberry Pi</li>
+    </ul>
+  </div>
+</section>
 
 
 
