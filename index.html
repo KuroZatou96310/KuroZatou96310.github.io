@@ -2,7 +2,6 @@
 <html lang="ja">
 
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ポートフォリオ2025作成" />
@@ -13,21 +12,6 @@
   <meta name="robots" content="noindex, nofollow">
 </head>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".toggle-detail");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        const detail = button.nextElementSibling;
-        const isVisible = detail.style.display === "block";
-        detail.style.display = isVisible ? "none" : "block";
-        button.textContent = isVisible ? "▶ 詳細を表示" : "▼ 詳細を非表示";
-      });
-    });
-  });
-</script>
-
 <body>
   <!-- ヘッダー -->
   <header id="header">
@@ -37,7 +21,7 @@
     </div>
     <ul>
       <li><a href="#about">About me</a></li>
-            <li><a href="#skills">skils</a></li>
+      <li><a href="#skills">skills</a></li>
       <li><a href="#works">works</a></li>
 
     </ul>
@@ -717,8 +701,6 @@
       </div>
     </div>
 
-
-
   </div>
 
 
@@ -739,7 +721,6 @@
 
 
   <script>
-
     document.querySelectorAll('.toggle-detail-btn').forEach(button => {
       button.addEventListener('click', function (e) {
         e.preventDefault();
