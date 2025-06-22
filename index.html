@@ -2,13 +2,15 @@
 <html lang="ja">
 
 <head>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ポートフォリオ2025作成" />
   <!-- reset.css ress -->
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-  <link rel="stylesheet" href="stylesheet2.css" />
+  <link rel="stylesheet" href="stylesheet.css" />
   <title>Portfolio</title>
+  <meta name="robots" content="noindex, nofollow">
 </head>
 
 <script>
@@ -34,10 +36,10 @@
       </h1>
     </div>
     <ul>
-      <li><a href="index.html">TOP</a></li>
-      <li><a href="P_han.html">about me</a></li>
-      <li><a href="CG_han.html">works</a></li>
-      <li><a href="Robo_han.html">skils</a></li>
+      <li><a href="#about">About me</a></li>
+            <li><a href="#skills">skils</a></li>
+      <li><a href="#works">works</a></li>
+
     </ul>
   </header>
 
@@ -46,60 +48,57 @@
 
 
   <section id="about" class="wrapper">
-    <h2 class="section-title">About Me</h2>
+    <h2 class="section-title">About me</h2>
+    <div class="profile-photo">
+      <img src="img/myhand_1.jpg" alt="プロフィール写真" class="profile-image">
+    </div>
 
     <ul class="event-list">
-      <li>-- -- 20--年　7月9日生まれ</li>
-      <li>------ -----部 ------学科　-年 --卒予定</li>
+      <li>佐藤 壮瑠 2004年　7月9日生まれ</li>
+      <li>日本工業大学 先進工学部 データサイエンス学科　27卒予定</li>
       <br>
-      <li>マイクロコンピュータ研究部のプログラム班チーフをしています。</li>
-      <li>機械学習や画像処理に興味があります</li>
+      <li>CG制作、ゲーム制作、Iot、VR、ヒューマノイドロボット、自作PCなど、様々なことに関心があり挑戦しています。</li>
+      <li>中でも特に、データ分析や機械学習・画像処理に興味があります。</li>
+      <li>大学では数理統計やプログラミングを基礎から学び、AI・IoTによるビッグデータ解析やシステム構築に取り組んでいます。</li>
     </ul>
   </section>
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-  <section id="skils" class="wrapper">
-    <h2 class="section-title">Skils</h2>
+  <section id="skills" class="wrapper">
+    <h2 class="section-title">Skills</h2>
 
     <div class="skill-card">
-      <h3>言語（習熟度順）</h3>
+      <h3>プログラミング言語</h3>
       <ul class="skill-list">
-        <li>Python - 2年間の学習・開発経験</li>
-        <li>HTML/CSS - 2年の学習・開発経験</li>
-        <li>C - 1年の学習・開発経験</li>
-        <li>SQL - 基本的なクエリ操作</li>
+        <li>Python - 2年以上の学習・開発経験（深層学習・データ分析・IoTなど幅広く活用）</li>
+        <li>C# - Unityを用いたゲーム・強化学習の開発経験</li>
+        <li>C - 1年以上の学習</li>
+
+        <li>SQL - 基本的なクエリ作成とデータ操作</li>
       </ul>
     </div>
 
     <div class="skill-card">
       <h3>開発環境・ツール</h3>
       <ul class="skill-list">
-        <li>VSCode - Webアプリ開発</li>
-        <li>Git / GitHub - ソースコードの管理</li>
-        <li>Linux (Ubuntu) - Raspberry Pi4で構築</li>
+        <li>VSCode </li>
+        <li>Git / GitHub</li>
+        <li>Linux (Ubuntu) </li>
+        <li>Blender - 3Dモデリング・スカルプト制作</li>
+        <li>Unity - 2D/3Dゲーム制作、ML-Agentsによる強化学習実装</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <h3>使用経験のあるライブラリ・フレームワーク</h3>
+      <h3>ライブラリ・フレームワーク・技術</h3>
       <ul class="skill-list">
-        <li>blender - 3Dモデル制作</li>
-        <li>PyTorch / TensorFlow / Keras</li>
-        <li>pandas / numpy / R言語</li>
-        <li>Unity / ML-Agents</li>
-        <li>Raspberry Pi</li>
+        <li>PyTorch / TensorFlow / Keras </li>
+        <li>YOLO - 物体検出モデルの再学習と推論強化</li>
+        <li>pandas / numpy</li>
+        <li>OpenCV</li>
+        <li>HTML/CSS </li>
       </ul>
     </div>
   </section>
@@ -110,30 +109,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <h2 class="section-title">works</h2>
+  <h2 class="section-title" id="works">works</h2>
 
   <div class="timeline">
 
@@ -147,7 +123,7 @@
         </h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
-            <p><strong>開始時間：</strong>2025/6/8 ～</p>
+            <p><strong>開始時期：</strong>2025/6/8 ～</p>
             <p>Kaggleのセンサデータコンペにて、人の行動を加速度・ジャイロセンサから推定するタスクに挑戦中です。</p>
             <ul class="tech-tags">
               <li>Python</li>
@@ -200,7 +176,7 @@
 
     <!-- Kaggle細胞コンペ -->
     <div class="timeline-item" data-project="kaggle-cell">
-      <div class="timeline-date">2024年8月</div>
+      <div class="timeline-date">2025年5月</div>
       <div class="timeline-content">
         <h3>
           Kaggle細胞コンペ（BYU Flagellar Motors）
@@ -212,7 +188,7 @@
 
             <ul class="tech-tags">
               <li>Python</li>
-              <li>YOLOv11</li>
+              <li>YOLO</li>
               <li>PyTorch</li>
               <li>Kaggle</li>
               <li>深層学習</li>
@@ -272,7 +248,7 @@
 
     <!-- 四足歩行ロボット -->
     <div class="timeline-item" data-project="robot">
-      <div class="timeline-date">2024年9月</div>
+      <div class="timeline-date">2025年4月</div>
       <div class="timeline-content">
         <h3>
           四足歩行ロボット
@@ -283,6 +259,7 @@
             <p>Unity ML-Agents による強化学習で歩行を習得する四足歩行ロボットを制作</p>
             <ul class="tech-tags">
               <li>Unity</li>
+              <li>C#</li>
               <li>ML-Agents</li>
               <li>強化学習</li>
               <li>PPO</li>
@@ -319,7 +296,7 @@
               </div>
               <div class="detail-text">
 
-                <h4>技術的課題と工夫</h4>
+                <h4>技術的課題と工夫した点</h4>
                 <ul class="challenge-list">
                   <li>Unity上での関節構造（Hip/Knee）の組み立てと駆動制御</li>
                   <li>トルク制御や回転スケールの調整による安定した歩行の実現</li>
@@ -341,18 +318,19 @@
     </div>
 
 
-    <!-- ブラックドラゴン -->
+
+
     <div class="timeline-item" data-project="black-dragon">
-      <div class="timeline-date">2024年10月</div>
+      <div class="timeline-date">2025年1月</div>
       <div class="timeline-content">
         <h3>ブラックドラゴン</h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
-            <p><strong>制作期間：</strong>約1週間</p>
-            <p>Blenderで制作した既存ゲームのキャラクターをベースとしたモデル</p>
+            <p><strong>制作期間：</strong>2日</p>
+            <p>Blenderで制作した既存ゲームキャラクターの立体化モデル</p>
             <ul class="tech-tags">
               <li>Blender</li>
-              <li>3Dモデリング</li>
+              <li>スカルプト</li>
               <li>3Dプリント</li>
             </ul>
           </div>
@@ -368,19 +346,33 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>プロジェクト概要</h4>
-                <p>既存ゲームに登場するブラックドラゴンのキャラクターモデルをBlenderで制作し、3Dプリンターでの出力を目的として設計しました。</p>
-                <h4>技術的な挑戦</h4>
-                <ul class="challenge-list">
-                  <li>既存キャラクターのリファレンスを元に忠実にモデリング</li>
-                  <li>3Dプリント時の造形制限を考慮したモデリングとパーツ分割</li>
-                  <li>高詳細なディテールを保ちながらポリゴン数を最適化</li>
-                </ul>
+                <p>
+                  スマートフォンゲーム『城とドラゴン』に登場するキャラクター「ブラックドラゴン」をモチーフに、非公式の個人制作として3DCGモデルを制作しました。
+                  2Dイラストしか存在しない状態から立体構造を想像して造形し、
+                  最終的に3Dプリントによるフィギュア出力を目指して制作しました。
+                  Blenderのスカルプト機能を中心に使用しています。
+                </p>
+                <p>
+                  <a href="https://www.asobism.co.jp/social/shirodora/" target="_blank" rel="noopener">▶ 城とドラゴン
+                    公式サイト</a>
+                </p>
+                <h4>工夫したポイント</h4>
+                <p>
+                  細かなパーツは球体や円柱などのプリミティブをベースに作り、整形することで作業効率を上げました。
+                  トゲなどの繰り返し使うパーツは別途モデリングし、コピー＆ペーストで配置を統一。
+                  プリント時にパーツが外れにくくなるよう、細部のサイズや接続部の太さにも工夫を施しました。
+                </p>
+
+
               </div>
               <div class="detail-text">
-                <h4>工夫したポイント</h4>
-                <p>プリント時のサポート材を最小限に抑えるため、パーツ分割を工夫し、組み立てやすさも考慮しました。テクスチャはプリント後の塗装を前提にして、モデリングに重点を置いています。</p>
-                <h4>学んだこと</h4>
-                <p>ゲームキャラクターの3Dプリント用モデル作成には、造形の物理的制約への理解と設計の工夫が不可欠であることを実感しました。</p>
+                <h4>技術的な挑戦</h4>
+                <ul class="challenge-list">
+                  <li>2次元のイラストから立体構造を想像・補完してモデリング</li>
+                  <li>Blenderのスカルプト機能を活用した造形表現</li>
+                  <li>3Dプリントを前提としたパーツ強度やキャラクターイメージの確保</li>
+                </ul>
+
               </div>
             </div>
             <div class="image-gallery">
@@ -392,17 +384,20 @@
               <img src="img/black_7.png" alt="ブラックドラゴン" class="project-image">
               <img src="img/black_8.png" alt="ブラックドラゴン" class="project-image">
               <img src="img/black_9.jpg" alt="ブラックドラゴン" class="project-image">
-
             </div>
+            <br>
+            <!-- 終了後にグラフや混同行列などを追加予定 -->
+            <p style="font-style: italic; color: #888;">
+              ※本作品は商用利用を目的とせず、あくまで個人の制作活動およびスキル習得の一環として制作したものです。キャラクターの著作権は株式会社アソビズムに帰属します。</p>
+
           </div>
         </div>
       </div>
     </div>
 
-
     <!-- イフリート -->
     <div class="timeline-item" data-project="ifrit">
-      <div class="timeline-date">2024年10月</div>
+      <div class="timeline-date">2024年11月</div>
       <div class="timeline-content">
         <h3>
           イフリート
@@ -414,7 +409,6 @@
             <ul class="tech-tags">
               <li>Blender</li>
               <li>スカルプト</li>
-              <li>テクスチャリング</li>
             </ul>
           </div>
           <div class="preview-image">
@@ -431,23 +425,30 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>デザインコンセプト</h4>
-                <p>炎の精霊イフリートをテーマに、迫力のあるクリーチャーモデルを短期間で制作することに挑戦しました。</p>
+                <p>『FINAL FANTASY XI』公式サイトに掲載された召喚獣イフリートの設定イラストをもとに、独自のアレンジを加えた3Dモデルを制作しました。</p>
+                <p>威圧感のあるフォルムを目指し、筋肉の盛り上がりや皮膚のシワ、血管の浮きなど、リアルな肉体表現にこだわっています。</p>
 
+                <p>
+                  <a href="https://we-are-vanadiel.finalfantasyxi.com/gallery/detail/?s=4&vol=4&id=4" target="_blank"
+                    rel="noopener">▶ 【召喚獣】イフリート 設定イラスト</a>
+                </p>
                 <h4>スカルプティング技法</h4>
                 <ul class="challenge-list">
-                  <li>ダイナミックスカルプトによる基本形状作成</li>
-                  <li>ディテールブラシによる質感表現</li>
-                  <li>炎エフェクトの表現手法</li>
+                  <li>ダイナミックスカルプトによる荒削りからの成形</li>
+                  <li>ディテールブラシでの筋繊維や血管表現</li>
                 </ul>
               </div>
               <div class="detail-text">
                 <h4>制作の工夫</h4>
-                <p>限られた時間の中で効率的にクオリティを上げるため、シルエットに重点を置いた造形を心がけました。炎の表現にはパーティクルシステムも併用しています。</p>
+                <p>まず頭部を先に完成させたうえで、一般的人体モデルをスケーリングして使用し、全体のバランスを整えながら巨大な体格に調整しました。</p>
+                <p>威圧感のある存在感を演出するため、時間制約の中でもシルエットの力強さと立体的な造形に重点を置いて制作しました。
+                  最終的にはアニメーション対応を考慮し、四角ポリゴンベースのリトポロジー処理を行っています。</p>
               </div>
             </div>
 
             <div class="image-gallery">
               <img src="img/ifrit_2.png" alt="イフリート" class="project-image">
+              <img src="img/ifrit_6.png" alt="イフリート" class="project-image">
               <img src="img/ifrit_3.png" alt="イフリート" class="project-image">
               <img src="img/ifrit_4.png" alt="イフリート" class="project-image">
               <img src="img/ifrit_5.png" alt="イフリート" class="project-image">
@@ -459,15 +460,14 @@
 
 
 
-
     <!-- AI当たり屋ゲーム -->
     <div class="timeline-item" data-project="ai-game">
-      <div class="timeline-date">制作期間：2日</div>
+      <div class="timeline-date">2024年7月</div>
       <div class="timeline-content">
         <h3>AI当たり屋ゲーム</h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
-            <p><strong>制作期間：</strong>2日</p>
+            <p><strong>制作期間：</strong>約1週間</p>
             <p>Pythonで開発した画像認識を活用したゲーム</p>
             <ul class="tech-tags">
               <li>Python</li>
@@ -489,18 +489,23 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>プロジェクト概要</h4>
-                <p>YOLOを用いたリアルタイム物体検出を取り入れた当たり判定ゲームを開発しました。</p>
+                <p>
+                  YOLOv5を活用し、カメラ映像に映らずにキーボードを操作することを目的とした「
+                  AI当たり屋ゲーム」を開発しました。物体検出AIが“人”を認識するとゲームオーバ
+                  ーになる仕組みで、プレイヤーはAIの目をかいくぐって行動します。<br>
+                  この作品は大学祭で展示し、来場者に体験してもらいました。
+                  プレイヤーがAIを騙そうとする様子や、AIとの駆け引きを見ることができました。
+                </p>
 
-                <h4>技術的挑戦</h4>
-                <ul class="challenge-list">
-                  <li>YOLOモデルの学習と最適化</li>
-                  <li>OpenCVによる映像処理の高速化</li>
-                  <li>リアルタイム性を考慮したゲームロジック設計</li>
-                </ul>
+
+
               </div>
               <div class="detail-text">
-                <h4>工夫した点</h4>
-                <p>物体検出精度の向上と遅延削減のバランスを重視。ゲーム性を損なわないUI設計と操作性の向上にも注力しました。</p>
+                <h4>使用技術・手法</h4>
+                <ul class="challenge-list">
+                  <li>YOLOv5のGitHubにある<code>detect.py</code>を活用したAI部分の構築</li>
+                  <li>OpenCVによるライブ映像の表示と処理</li>
+                </ul>
               </div>
             </div>
             <div class="image-gallery">
@@ -518,7 +523,7 @@
 
     <!-- 部室スマートキー -->
     <div class="timeline-item" data-project="smart-key">
-      <div class="timeline-date">制作期間：2週間</div>
+      <div class="timeline-date">2024年5月</div>
       <div class="timeline-content">
         <h3>部室スマートキー
           <span class="status-badge status-maintenance">保守中</span>
@@ -526,12 +531,14 @@
         <div class="basic-info-with-image">
           <div class="basic-info">
             <p><strong>制作期間：</strong>2週間</p>
-            <p>Blenderで制作した3Dプリントフィギュア用（※プロジェクトに合わせて説明を修正してください）</p>
+            <p>部室の鍵をスマート化し、Discordチャットで遠隔解錠できるシステムを構築しました。</p>
             <ul class="tech-tags">
               <li>Python</li>
               <li>Raspberry Pi</li>
               <li>マイコン</li>
               <li>IoT</li>
+              <li>Discord API</li>
+              <li>3Dプリント</li>
             </ul>
           </div>
           <div class="preview-image">
@@ -548,26 +555,36 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>プロジェクト概要</h4>
-                <p>部室の鍵をスマート化し、非接触での解錠を可能にするシステムを開発しました。</p>
+                <p>
+                  部室の鍵をスマート化し、非接触での解錠を可能にするシステムを開発しました。部活動で普段使用しているDiscordと連携させることで、部員がスマートフォンやPCからチャット操作で鍵の開閉ができるようにしました。
+                </p>
 
-                <h4>使用した技術</h4>
-                <ul class="challenge-list">
-                  <li>discord API を使用した部室スマートキー</li>
-                  <li>Python GPIO によるモーター制御</li>
-                  <li>3Dプリントケースの設計・製作</li>
-                </ul>
+                <h4>工夫した点・得られた経験</h4>
+                <p>
+                  ユーザビリティを重視し、部員が普段使っているDiscordから操作できる設計にしました。また、機構部分のギア設計を後輩と分担しながら進めることで、チーム開発の実践的な経験も得られました。
+                  <br>完成後にもモーターの不具合や設計変更が何度か発生し、そのたびにプログラムを修正する必要があり、柔軟な対応力を養うことができました。
+                </p>
+
+
+
               </div>
               <div class="detail-text">
-                <h4>工夫した点</h4>
-                <p>ユーザビリティを重視し、スマートフォンアプリから簡単に管理できるインターフェースを設計しました。堅牢かつ軽量な3Dプリントケースで耐久性を確保しました。</p>
+                <h4>使用した技術</h4>
+                <ul class="challenge-list">
+                  <li>Discord APIを利用したチャット連動型鍵制御</li>
+                  <li>PythonとGPIOによるモーター制御</li>
+                  <li>Raspberry Piによる常時稼働システム</li>
+                  <li>3Dプリントの設計・制作（後輩と連携してギア構造を設計）</li>
+                  <li>電源投入時に自動でプログラムが実行されるよう設定</li>
+                </ul>
               </div>
             </div>
             <div class="image-gallery">
               <img src="img/smartkey_5.png" alt="スマートキーのCAD画像" class="project-image">
               <img src="img/smartkey_4.jpg" alt="スマートキー画像本体1" class="project-image">
-              <img src="img/smartkey_7.png" alt="スマートキー画像本体1" class="project-image">
-              <img src="img/smartkey_8.jpg" alt="スマートキー画像本体1" class="project-image">
-              <img src="img/smartkey_1.png" alt="Discordチャット" class="project-image">
+              <img src="img/smartkey_7.png" alt="スマートキー画像本体2" class="project-image">
+              <img src="img/smartkey_8.jpg" alt="スマートキー画像本体3" class="project-image">
+              <img src="img/smartkey_1.png" alt="Discordチャット画面" class="project-image">
             </div>
           </div>
         </div>
@@ -577,18 +594,18 @@
 
     <!-- アヒルパーカマン -->
     <div class="timeline-item" data-project="duck">
-      <div class="timeline-date">2024年11月</div>
+      <div class="timeline-date">2023年8月</div>
       <div class="timeline-content">
-        <h3>
-          アヒルパーカマン
-        </h3>
+        <h3>アヒルパーカマン</h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
             <p><strong>制作期間：</strong>1週間</p>
-            <p>Blenderで制作した人形ローポリモデル</p>
+            <p>ポリゴン数を抑えて制作した、アヒルパーカーを着た女の子のローポリ人形モデル</p>
             <ul class="tech-tags">
               <li>Blender</li>
               <li>3Dモデリング</li>
+              <li>テクスチャペイント</li>
+              <li>ボーン設定</li>
             </ul>
           </div>
           <div class="preview-image">
@@ -605,18 +622,21 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>制作コンセプト</h4>
-                <p>可愛らしいアヒルをモチーフにした、ゲーム用ローポリキャラクターモデルの制作に挑戦しました。</p>
+                <p>紫色のアヒルパーカーを着た女の子の人形キャラクターを、ローポリゴンで温かみのある雰囲気に仕上げました。シンプルながらも可愛さのあるデザインを目指しました。</p>
 
-                <h4>技術的なポイント</h4>
-                <ul class="challenge-list">
-                  <li>効率的なポリゴン削減テクニック</li>
-                  <li>UV展開とテクスチャマッピング</li>
-                  <li>アニメーション用のリギング</li>
-                </ul>
+                <h4>制作プロセス</h4>
+                <p>Blenderを用いて、キャラクターの下書きからモデリング、UV展開、テクスチャペイント、リギング、ボーン強度の設定まで、0から一貫して制作しました。</p>
+
               </div>
               <div class="detail-text">
-                <h4>制作プロセス</h4>
-                <p>まずハイポリモデルを作成し、その後リトポロジーでローポリ化。パーカーの質感表現にこだわり、シンプルながらも魅力的なキャラクターに仕上げました。</p>
+
+                <h4>工夫した点</h4>
+                <ul class="challenge-list">
+                  <li>ローポリながら可愛らしさを表現する造形</li>
+                  <li>手描きテクスチャによる表現力の向上</li>
+                  <li>動きを意識したボーンの設置とウェイト設定</li>
+                </ul>
+
               </div>
             </div>
 
@@ -628,9 +648,6 @@
               <img src="img/model_kuro_6.png" alt="アヒルパーカマン" class="project-image">
               <img src="img/model_kuro_7.png" alt="アヒルパーカマン" class="project-image">
               <img src="img/model_kuro_9.png" alt="アヒルパーカマン" class="project-image">
-
-
-
             </div>
           </div>
         </div>
@@ -640,11 +657,9 @@
 
     <!-- 魚達の闘争 -->
     <div class="timeline-item" data-project="sakana">
-      <div class="timeline-date">2024年12月</div>
+      <div class="timeline-date">2023年7月</div>
       <div class="timeline-content">
-        <h3>
-          魚達の闘争
-        </h3>
+        <h3>魚達の闘争</h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
             <p><strong>制作期間：</strong>1週間</p>
@@ -652,7 +667,6 @@
             <ul class="tech-tags">
               <li>Unity</li>
               <li>C#</li>
-              <li>Joy-Con</li>
             </ul>
           </div>
           <div class="preview-image">
@@ -669,21 +683,27 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>制作意図・目標</h4>
-                <p>ゲームパッド（Joy-Con）対応のマルチプレイゲームを通して、UnityのInput Systemを深く学習することを目標としました。</p>
+                <p>Joy-Conを使ったマルチプレイ体験を通じて、Unityの新Input Systemの理解を深めることを目的としました。</p>
 
                 <h4>技術的な挑戦</h4>
                 <ul class="challenge-list">
-                  <li>Unity Input Systemを使った複数コントローラー対応</li>
-                  <li>水中の物理演算と浮力表現</li>
-                  <li>リアルタイム対戦のゲームバランス調整</li>
+                  <li>Unity Input Systemを用いた最大4人のコントローラー接続と動作管理</li>
+                  <li>キャラクター同士の当たり判定処理とゲームバランス調整</li>
+                  <li>Joy-Conのスティックとボタンのみで完結する直感的な操作設計</li>
                 </ul>
               </div>
               <div class="detail-text">
-                <h4>工夫したポイント</h4>
-                <p>水中らしさを表現するために、魚の動きに加速度制限を設け、水流エフェクトをパーティクルシステムで実装しました。また、Joy-Conの振動機能を活用して、衝突時のフィードバックを強化しています。</p>
+                <h4>成果</h4>
+                <p>大学祭ではプロジェクターを使用して展示し、来場した子どもたちに大変好評でした。</p>
 
-                <h4>学んだこと</h4>
-                <p>Input Systemの柔軟性と、物理演算を使ったゲーム性の作り込みの重要性を実感しました。短期間でのプロトタイプ開発のコツも掴めました。</p>
+
+                <h4>工夫したポイント</h4>
+                <ul class="challenge-list">
+                  <li>キャラクターのツノを使って相手を弾き飛ばすという直感的なゲーム設計</li>
+                  <li>10秒に一度ボタンで急加速できる駆け引き要素</li>
+                  <li>敗北者同士が再戦できるモードを追加し、最後まで楽しめるようにした</li>
+                  <li>シンプルなルールで説明なしでもプレイ可能なデザイン</li>
+                </ul>
               </div>
             </div>
 
@@ -696,6 +716,8 @@
         </div>
       </div>
     </div>
+
+
 
   </div>
 
@@ -711,7 +733,7 @@
   <!-- フッター -->
   <footer class="footer">
     <div class="footer-left">
-      <div class="footer-text">© 2025 ----</div>
+      <div class="footer-text">© 2025 佐藤 壮瑠</div>
     </div>
   </footer>
 
@@ -807,32 +829,6 @@
     });
 
   </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
