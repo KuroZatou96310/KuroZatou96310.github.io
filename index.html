@@ -133,29 +133,31 @@
 
 
 
-  <h2 class="section-title">制作実績</h2>
+  <h2 class="section-title">works</h2>
 
   <div class="timeline">
 
     <!-- Kaggleセンサデータコンペ -->
     <div class="timeline-item" data-project="kaggle-sensor">
-      <div class="timeline-date">制作期間：2週間</div>
+      <div class="timeline-date">2025年6月 ～</div>
       <div class="timeline-content">
         <h3>
           Kaggleセンサデータコンペ
-          <span class="status-badge status-development">制作中</span>
+          <span class="status-badge status-development">参加中</span>
         </h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
-            <p><strong>制作期間：</strong>2週間</p>
-            <p>Blenderで制作した3Dプリントフィギュア用</p>
+            <p><strong>開始時間：</strong>2025/6/8 ～</p>
+            <p>Kaggleのセンサデータコンペにて、人の行動を加速度・ジャイロセンサから推定するタスクに挑戦中です。</p>
             <ul class="tech-tags">
-              <li>Blender</li>
-              <li>スカルプト</li>
+              <li>Python</li>
+              <li>前処理・EDA</li>
+              <li>深層学習</li>
             </ul>
           </div>
           <div class="preview-image">
-            <img src="" alt="Kaggleセンサデータコンペ プレビュー画像" class="preview-img">
+            <img src="https://www.kaggle.com/competitions/102335/images/header" alt="Kaggleセンサデータコンペ"
+              class="preview-img">
           </div>
         </div>
         <button class="toggle-detail-btn" data-target="kaggle-sensor">
@@ -168,43 +170,49 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>プロジェクト概要</h4>
-                <p>Kaggleのセンサデータ分析コンペに参加し、機械学習モデルの構築とチューニングを行いました。</p>
+                <p>
+                  Kaggleの「CMI Sensor Data for Human Activity
+                  Recognition」コンペに参加し、マルチクラス分類モデルの構築に取り組んでいます。現時点では前処理・特徴量エンジニアリングを中心に開発を進行中です。
+                  コンペ開催中のため、規約に則りソースコードや具体的な手法の公開は控えています。
+                  <br>
+                  <a href="https://www.kaggle.com/competitions/cmi-detect-behavior-with-sensor-data/overview"
+                    target="_blank" rel="noopener">▶ コンペ公式ページ（Kaggle）</a>
+                </p>
 
-                <h4>技術的挑戦</h4>
-                <ul class="challenge-list">
-                  <li>データ前処理と特徴量エンジニアリング</li>
-                  <li>多様な機械学習モデルの比較検証</li>
-                  <li>過学習防止のためのクロスバリデーションの導入</li>
-                </ul>
               </div>
               <div class="detail-text">
-                <h4>工夫した点</h4>
-                <p>特徴量選択に重点を置き、精度向上に寄与する重要な指標を見極めました。また、モデルの軽量化にも取り組み、実用的な推論速度を確保しました。</p>
+                <h4>解決すべき課題</h4>
+                <ul class="challenge-list">
+                  <li>少ないデータで精度を出す</li>
+                  <li>センサーデータ特有のノイズ</li>
+                  <li>クラス不均衡データの処理</li>
+                </ul>
               </div>
             </div>
             <div class="image-gallery">
-              <img src="" alt="センサデータ解析のグラフ例" class="project-image">
-              <img src="" alt="機械学習モデルの評価結果" class="project-image">
+              <!-- 終了後にグラフや混同行列などを追加予定 -->
+              <p style="font-style: italic; color: #888;">※コンペ開催中のため、成果物のビジュアル公開は終了後に予定しています。</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-
     <!-- Kaggle細胞コンペ -->
     <div class="timeline-item" data-project="kaggle-cell">
       <div class="timeline-date">2024年8月</div>
       <div class="timeline-content">
         <h3>
-          Kaggle細胞コンペ
+          Kaggle細胞コンペ（BYU Flagellar Motors）
         </h3>
         <div class="basic-info-with-image">
           <div class="basic-info">
             <p><strong>制作期間：</strong>2週間</p>
-            <p>画像分類タスクにCNNを用いて参加</p>
+            <p>細菌画像からフラジェラー・モーターの位置を検出する物体検出タスクに参加</p>
+
             <ul class="tech-tags">
               <li>Python</li>
+              <li>YOLOv11</li>
               <li>PyTorch</li>
               <li>Kaggle</li>
               <li>深層学習</li>
@@ -224,20 +232,31 @@
             <div class="detail-grid">
               <div class="detail-text">
                 <h4>コンペ概要</h4>
-                <p>細胞画像の分類精度を競うKaggleコンペティションに参加し、CNNモデルの実装とチューニングに取り組みました。</p>
+                <p>BYU主催のKaggleコンペ「Locating Bacterial Flagellar
+                  Motors」に参加。細菌の3Dトモグラム画像から、べん毛モーターの位置を正確に検出するアルゴリズムを構築する課題に取り組みました。</p>
+                <a href="https://www.kaggle.com/competitions/byu-locating-bacterial-flagellar-motors-2025/overview"
+                  target="_blank" rel="noopener">▶ コンペ公式ページ（Kaggle）</a>
+                </p>
+                <h4>成果と学び</h4>
+                <p>
+                  目標としていた上位10%には届きませんでしたが、コンペ終了後も上位者の解法を分析し、推論戦略や検出精度の改善余地について学びました。物体検出タスクにおける後処理の工夫や学習データ拡張の効果を実感することができました。
+                </p>
 
-                <h4>使用技術・手法</h4>
-                <ul class="challenge-list">
-                  <li>EfficientNet をベースとした転移学習</li>
-                  <li>データ拡張（回転、反転、色調変更）</li>
-                  <li>アンサンブル学習による精度向上</li>
-                </ul>
+
               </div>
               <div class="detail-text">
-                <h4>成果と学び</h4>
-                <p>最終的に上位30%の成績を収めることができました。特に前処理の重要性とモデル選択の影響の大きさを実感できた貴重な経験でした。</p>
+                <h4>使用技術・手法</h4>
+                <ul class="challenge-list">
+                  <li>YOLOv11を用いた物体検出モデルの再学習</li>
+                  <li>TTA（Test Time Augmentation）による推論強化</li>
+                  <li>WBF（Weighted Box Fusion）によるボックス統合</li>
+                  <li>データ拡張：回転、反転、色調変化、モザイク、MixUp、CopyPasteなど</li>
+                  <li>AdamWオプティマイザ、早期終了などの導入</li>
+                </ul>
+
               </div>
             </div>
+
 
             <div class="image-gallery">
               <img src="img/byu_2.png" alt="BYUコンペ" class="project-image">
@@ -261,16 +280,16 @@
         <div class="basic-info-with-image">
           <div class="basic-info">
             <p><strong>制作期間：</strong>2週間</p>
-            <p>Blenderで制作した3Dプリント用ロボットモデル</p>
+            <p>Unity ML-Agents による強化学習で歩行を習得する四足歩行ロボットを制作</p>
             <ul class="tech-tags">
-              <li>Blender</li>
-              <li>3Dプリント設計</li>
-              <li>メカニカルデザイン</li>
+              <li>Unity</li>
+              <li>ML-Agents</li>
+              <li>強化学習</li>
+              <li>PPO</li>
             </ul>
           </div>
           <div class="preview-image">
-            <img src="img/agent_1.png" alt="四足歩行ロボット"
-              class="preview-img">
+            <img src="img/agent_1.png" alt="四足歩行ロボット" class="preview-img">
           </div>
         </div>
         <button class="toggle-detail-btn" data-target="robot">
@@ -282,28 +301,39 @@
           <div class="detail-content">
             <div class="detail-grid">
               <div class="detail-text">
-                <h4>設計思想</h4>
-                <p>実際に3Dプリントして組み立て可能な、機能的な四足歩行ロボットの設計に挑戦しました。</p>
+                <h4>プロジェクト概要</h4>
+                <p>
+                  Unity ML-Agents Toolkit に付属する四足歩行チュートリアルを参考に、自作のロボットモデルを用いた歩行学習を行いました。
+                  脚は十字型に配置されており、平坦な地形上で目標物に向かって効率的に移動することを目的としています。
+                  学習には強化学習アルゴリズム「Proximal Policy Optimization（PPO）」を使用し、基本的な歩行メカニズムの理解と最適化に注力しました。
+                </p>
 
-                <h4>技術的課題</h4>
-                <ul class="challenge-list">
-                  <li>3Dプリント制約を考慮した設計</li>
-                  <li>関節の可動域とクリアランス計算</li>
-                  <li>組み立て手順の最適化</li>
-                </ul>
+                <h4>成果と学び</h4>
+                <p>
+                  チュートリアルのモデルほど精度良くは学習できなかったものの、
+                  Unityにおける関節の動きやトルク調整、強化学習における報酬と罰のバランスについて深く学ぶことができました。
+                  強化学習における「学習させたい行動をどう報酬で導くか」という設計力の重要性を実感できました。。
+                </p>
+
+
               </div>
               <div class="detail-text">
-                <h4>実装のポイント</h4>
-                <p>サポート材を最小限に抑える分割設計と、組み立て後の強度を両立させることに注力しました。歩行メカニズムの実現可能性も検証済みです。</p>
+
+                <h4>技術的課題と工夫</h4>
+                <ul class="challenge-list">
+                  <li>Unity上での関節構造（Hip/Knee）の組み立てと駆動制御</li>
+                  <li>トルク制御や回転スケールの調整による安定した歩行の実現</li>
+                  <li>報酬設計（地面接触・ターゲットへの接近・移動速度）</li>
+                  <li>オリジナルモデルの学習安定化とバランス取り</li>
+                </ul>
               </div>
             </div>
 
             <div class="image-gallery">
-
               <img src="img/agent_2.png" alt="四足歩行ロボット" class="project-image">
-              <img src="img/agent_4.gif" alt="四足歩行ロボット"class="project-image">
-              <img src="img/agent_3.png" alt="四足歩行ロボット"class="project-image">
-              <img src="img/agent_5.png" alt="四足歩行ロボット"class="project-image">
+              <img src="img/agent_4.gif" alt="四足歩行ロボット" class="project-image">
+              <img src="img/agent_3.png" alt="四足歩行ロボット" class="project-image">
+              <img src="img/agent_5.png" alt="四足歩行ロボット" class="project-image">
             </div>
           </div>
         </div>
@@ -722,7 +752,7 @@
           timelineItem.classList.add('expanded');
           detailSection.style.maxHeight = detailSection.scrollHeight + "px";
           this.innerHTML = '<span class="toggle-icon">▲</span>詳細を非表示';
-          
+
           // 開いた項目が見えるようにスクロール調整
           setTimeout(() => {
             timelineItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
