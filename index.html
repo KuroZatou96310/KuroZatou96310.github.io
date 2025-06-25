@@ -708,13 +708,14 @@
   </div>
 
 
-
-  <div id="imageModal" class="modal" style="display: none;">
-    <div class="modal-content">
-      <span class="close">&times;</span>
+<div id="imageModal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="modal-image-container">
       <img id="modalImage" src="" alt="">
     </div>
   </div>
+</div>
 
   <!-- フッター -->
   <footer class="footer">
@@ -777,25 +778,57 @@
     const modalImg = document.getElementById('modalImage');
     const closeBtn = document.querySelector('.close');
 
-    document.querySelectorAll('.project-image, .preview-img').forEach(img => {
-      img.addEventListener('click', function (e) {
-        e.stopPropagation(); // 親要素のクリックイベントを防ぐ
-        modal.style.display = 'block';
-        modalImg.src = this.src;
-        modalImg.alt = this.alt;
-      });
-    });
+document.querySelectorAll('.project-image, .preview-img').forEach(img => {
+  img.addEventListener('click', function (e) {
+    e.stopPropagation();
+    modal.style.display = 'block';
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    
+    // 画像読み込み完了後にサイズを調整
+    modalImg.onload = function() {
+      calculateModalSize();
+    };
+  });
+});
 
-    // モーダルを閉じる
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
+// サイズ計算関数を追加
+function calculateModalSize() {
+  const img = modalImg;
+  const container = document.querySelector('.modal-image-container');
+  
+  const maxWidth = window.innerWidth * 0.7;
+  const maxHeight = window.innerHeight * 0.7;
+  
+  const aspectRatio = img.naturalWidth / img.naturalHeight;
+  
+  let displayWidth, displayHeight;
+  
+  if (aspectRatio > maxWidth / maxHeight) {
+    displayWidth = maxWidth;
+    displayHeight = maxWidth / aspectRatio;
+  } else {
+    displayHeight = maxHeight;
+    displayWidth = maxHeight * aspectRatio;
+  }
+  
+  container.style.width = displayWidth + 'px';
+  container.style.height = displayHeight + 'px';
+  img.style.width = displayWidth + 'px';
+  img.style.height = displayHeight + 'px';
+}
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
+// モーダルを閉じる
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+modal.addEventListener('click', (e) => {
+  // モーダル背景、modal-content、またはmodal-image-containerをクリックした場合に閉じる
+  if (e.target === modal || e.target.classList.contains('modal-content') || e.target.classList.contains('modal-image-container')) {
+    modal.style.display = 'none';
+  }
+});
 
     // ESCキーでモーダルを閉じる
     document.addEventListener('keydown', (e) => {
